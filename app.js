@@ -13,10 +13,10 @@ app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "index.html"));
 });
 
-app.get("/mongotest", (req, res) => {
-  const comments = Comments.find({});
+app.get("/mongotest", async (req, res) => {
+  const comments = await Comments.find();
 
-  res.send(comments.toJSON());
+  res.send(comments);
 });
 
 app.listen(port, () => {
