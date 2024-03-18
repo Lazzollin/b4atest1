@@ -14,8 +14,8 @@ app.get("/", (req, res) => {
 });
 
 app.get("/mongotest", async (req, res) => {
-  const comments = await Comments.find();
-
+  const comments = await Comments.find({});
+  console.log(comments);
   res.send(comments);
 });
 
