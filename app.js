@@ -1,7 +1,7 @@
 const express = require("express");
 const path = require("path");
 const Comments = require("./src/models/comments");
-const mongoose = require("mongoose");
+// const mongoose = require("mongoose");
 const app = express();
 const port = 3000;
 
