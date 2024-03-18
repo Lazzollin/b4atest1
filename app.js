@@ -12,7 +12,7 @@ app.get("/", (req, res) => {
 });
 
 app.get("/mongotest", (req, res) => {
-  const comments = Comments.find();
+  const comments = Comments.find({});
 
   res.send(comments);
 });
