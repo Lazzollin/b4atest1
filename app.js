@@ -11,8 +11,8 @@ app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "index.html"));
 });
 
-app.get("/mongotest", async (req, res) => {
-  const comments = await Comments.find({});
+app.get("/mongotest", (req, res) => {
+  const comments = Comments.find({});
 
   res.send(comments);
 });
