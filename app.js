@@ -5,6 +5,8 @@ const mongoose = require("mongoose");
 const app = express();
 const port = 3000;
 
+app.use(express.json({ limit: "50mb" }));
+
 mongoose.connect(process.env.MONGO_URL);
 
 app.get("/", (req, res) => {
