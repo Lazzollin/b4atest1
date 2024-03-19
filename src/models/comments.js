@@ -19,6 +19,6 @@ const comments = new Schema({
   },
 });
 
-const Comments = model("comments", comments, "sample_mflix");
+const Comments = model("comments", comments);
 
 module.exports = Comments;
