@@ -16,7 +16,7 @@ app.get("/", (req, res) => {
 app.get("/mongotest", async (req, res) => {
   const comments = await Comments.find({});
   console.log(comments);
-  res.send(comments);
+  res.json(comments);
 });
 
 app.listen(port, () => {
